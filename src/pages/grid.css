@@ -1,0 +1,17 @@
+.grid {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.padding0 {padding: 0;}
+.padding1 {padding: 5px;}
+.padding2 {padding: 10px;}
+.padding3 {padding: 15px;}
+.padding4 {padding: 20px;}
+.padding5 {padding: 25px;}
+.padding6 {padding: 30px;}
+.padding7 {padding: 35px;}
+.padding8 {padding: 40px;}
+.padding9 {padding: 45px;}
+.padding10 {padding: 50px;}
