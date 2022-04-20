@@ -35,11 +35,27 @@ const useStyles = makeStyles((theme) => ({
 
 const recents = [{
   name: "Fight Covid - App",
-  url: "/ui/single-pages/covid",
+  url: "https://laurindo.github.io/fight-covid/#/",
+  redirect: true,
   cover: "https://res.cloudinary.com/luneswallet/image/upload/v1594560822/react-examples/fight-covid-app.png"
+}, {
+  name: "Pointbreak - App",
+  url: "https://pointbreak-dashboard-fxo5v1ofx-dslaurindo.vercel.app/auth/signin",
+  redirect: true,
+  cover: "https://res.cloudinary.com/luneswallet/image/upload/v1650484248/pointbreak-trade_rha9qm.png"
+}, {
+  name: "Weather - App",
+  url: "https://laurindo-weather-app.herokuapp.com/",
+  redirect: true,
+  cover: "https://res.cloudinary.com/luneswallet/image/upload/v1650484143/weather-app_vibu3z.png"
 }, {
   name: "Google Play Cards",
   url: "/ui/single-pages/mobile/details/03",
+  cover: "https://res.cloudinary.com/luneswallet/image/upload/v1594214210/react-examples/google-play-mobile-cards.png"
+}, {
+  name: "Pointbreak - App",
+  url: "/ui/single-pages/mobile/details/03",
+  redirect: true,
   cover: "https://res.cloudinary.com/luneswallet/image/upload/v1594214210/react-examples/google-play-mobile-cards.png"
 }, {
   name: "Delivery Food Examples",
@@ -83,12 +99,16 @@ function HomePage(props) {
   return (
     <div className={classes.container}>
       <Grid container spacing={4}>
-        <Grid item xs={12} lg={9}>
+        <Grid item xs={12}>
           <h3 className={classes.title}>Recent Content</h3>
           <Grid container spacing={2}>
             {recents.map((r, i) => (
-              <Grid item xs={12} lg={4}>
-                <Card key={i} classes={{root: classes.card}} onClick={() => props.history.push(r.url)}>
+              <Grid item xs={12} lg={3}>
+                <Card key={i} classes={{root: classes.card}} onClick={() => {
+                  r.redirect 
+                    ? window.location.href=r.url 
+                    : props.history.push(r.url)
+                }}>
                   <CardHeader title={r.name} subheader={r.desc}/>
                   <CardMedia
                     image={r.cover}
@@ -99,7 +119,6 @@ function HomePage(props) {
             ))}
           </Grid>
         </Grid>
-        <ADSSection/>
       </Grid>
 
       <Footer/>
