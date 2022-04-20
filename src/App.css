@@ -13,7 +13,6 @@ html, body {height: 100%; padding-bottom: 100px;}
   min-width: 600px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
 @media only screen and (max-width: 426px) {
@@ -83,7 +82,8 @@ html, body {height: 100%; padding-bottom: 100px;}
 .inner {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 40px;
 }
 
 .subMenu {
@@ -128,7 +128,7 @@ html, body {height: 100%; padding-bottom: 100px;}
 
 .logo {
   font-family: 'Nunito', sans-serif;
-  color: #e60cf3;
+  color: #fff;
   display: flex;
   align-items: center;
   margin: 0;
