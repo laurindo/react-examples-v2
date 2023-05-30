@@ -2,6 +2,7 @@
   "name": "react-examples-v2",
   "version": "0.1.0",
   "private": false,
+  "homepage": "https://laurindo.github.io/react-examples-v2",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
